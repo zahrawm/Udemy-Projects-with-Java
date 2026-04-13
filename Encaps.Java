@@ -1,22 +1,54 @@
+class Human
+{
+	
+	private int age;
+	private String name;
+	
+	public int getAge()
+	{
+		return age;
+	}
+	public void SetAge(int age, Human obj)
+	{
+		//Human obj1=new Human();
+		Human obj1=obj;
+		obj1.age=age;
+		//this.age=age;
+	}
+	
+//	public void SetAge(int a)
+//	{
+//		age=a;
+//	}
 
- class Human {
-    private int age = 90;
-     private  String name;
+	
+	public String getName()
+	{
+		return name;
+	}
+	public void setName(String name)
+	{
+		this.name=name;
+	}
+	
+//	public void setName(String n)
+//	{
+//		name=n;
+//	}
 
-      public int getAge(int age) {
-        return age;
-      }
-      public String getName(String n) {
-        return name;
-      }
- }
+}
 
-public class Encaps {
-     Human h = new Human();
-     h.age = 25;
-    h.name = "John";
-    h.getAge( 67);
-    h.getName("Jane");
-  System.out.println("Age: " + h.getAge(67));
-    System.out.println("Name: " + h.getName("Jane"));   
+public class Encaps{
+	public static void main(String[] args) throws ClassNotFoundException
+	{
+		Human obj=new Human();
+
+		obj.SetAge(30,obj);
+//		obj.SetAge(30);
+		obj.setName("Reddy");
+		
+//		System.out.println(obj.abc()+" : "+obj.getAge());
+		System.out.println(obj.getName()+" : "+obj.getAge());
+	
+	}
 }

@@ -36,7 +36,18 @@ public class QuestionService {
      for (int i = 0; i < questions.length; i++){
           Question que = questions[i];
           String actualAnswer = que.getAnswer();
-            String userAnswer = selection[i];
+
+          // Map the user's letter choice to the actual option value
+          String userLetter = selection[i].trim().toUpperCase();
+          String userAnswer;
+          switch (userLetter) {
+              case "A": userAnswer = que.getOpt1(); break;
+              case "B": userAnswer = que.getOpt2(); break;
+              case "C": userAnswer = que.getOpt3(); break;
+              case "D": userAnswer = que.getOpt4(); break;
+              default:  userAnswer = selection[i]; break; // fallback if they type full answer
+          }
+
             if(actualAnswer.equals(userAnswer)){
                 score++;
             }

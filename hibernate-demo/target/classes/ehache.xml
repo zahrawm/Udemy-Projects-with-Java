@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+
+    <!-- ✅ Student Cache -->
+    <cache name="com.example.model.Student"
+           maxEntriesLocalHeap="1000"
+           eternal="false"
+           timeToLiveSeconds="300"
+           timeToIdleSeconds="120"
+           memoryStoreEvictionPolicy="LRU"/>
+
+    <!-- ✅ LibraryCard Cache -->
+    <cache name="com.example.model.LibraryCard"
+           maxEntriesLocalHeap="500"
+           eternal="false"
+           timeToLiveSeconds="300"
+           timeToIdleSeconds="120"
+           memoryStoreEvictionPolicy="LRU"/>
+
+    <!-- ✅ Address Cache -->
+    <cache name="com.example.model.Address"
+           maxEntriesLocalHeap="500"
+           eternal="false"
+           timeToLiveSeconds="300"
+           timeToIdleSeconds="120"
+           memoryStoreEvictionPolicy="LRU"/>
+
+    <!-- ✅ Course Cache -->
+    <cache name="com.example.model.Course"
+           maxEntriesLocalHeap="500"
+           eternal="false"
+           timeToLiveSeconds="300"
+           timeToIdleSeconds="120"
+           memoryStoreEvictionPolicy="LRU"/>
+
+    <!-- Default fallback cache -->
+    <defaultCache
+           maxEntriesLocalHeap="200"
+           eternal="false"
+           timeToLiveSeconds="120"/>
+
+</ehcache>

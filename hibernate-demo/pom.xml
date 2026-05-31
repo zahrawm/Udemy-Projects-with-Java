@@ -31,6 +31,18 @@
       <artifactId>postgresql</artifactId>
       <version>42.7.3</version>
     </dependency>
+    <!-- ✅ EhCache for L2 -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-ehcache</artifactId>
+    <version>5.6.15.Final</version>
+</dependency>
+
+<dependency>
+    <groupId>net.sf.ehcache</groupId>
+    <artifactId>ehcache</artifactId>
+    <version>2.10.9.2</version>
+</dependency>
 
     <!-- Jakarta Persistence API -->
     <dependency>
